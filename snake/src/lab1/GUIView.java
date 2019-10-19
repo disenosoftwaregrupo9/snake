@@ -41,7 +41,7 @@ public class GUIView extends JPanel {
 	@SuppressWarnings("synthetic-access")
 	public GUIView(IGameFactory factory) {
 		// Create a new GameView
-		this.gameView = new GameView(15);
+		this.gameView = new GameView();
 
 		// Create a new GameController connected to the GameView
 		this.gameController = new GameController(this.gameView);
