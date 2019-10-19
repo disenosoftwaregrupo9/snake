@@ -41,7 +41,7 @@ public class GUIView extends JPanel {
 	@SuppressWarnings("synthetic-access")
 	public GUIView(IGameFactory factory) {
 		// Create a new GameView
-		this.gameView = new GameView();
+		this.gameView = new GameView(15);
 
 		// Create a new GameController connected to the GameView
 		this.gameController = new GameController(this.gameView);
@@ -50,7 +50,7 @@ public class GUIView extends JPanel {
 		this.gameFactory = factory;
 
 		// Set the background on the GameView
-		this.gameView.setBackground(Color.white);
+		this.gameView.setBackground(Color.lightGray);
 
 		// Set the layout on myself
 		setLayout(new BorderLayout());
@@ -63,7 +63,7 @@ public class GUIView extends JPanel {
 
 		// Create a new button on that panel and add a StartGameListener as
 		// listener on that button
-		this.startGameButton = new JButton("Let's Go!!!");
+		this.startGameButton = new JButton("Let’s Play");
 		this.startGameButton.addActionListener(new StartGameListener());
 		this.guiPanel.add(this.startGameButton);
 
